@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yassir – Chatbot Eventos York & Katy</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles/colors.css">
+  <link rel="stylesheet" href="styles/chat.css">
+</head>
+
+<body>
+
+  <!-- Botón flotante -->
+  <button id="chat-button" onclick="openChat()">💬</button>
+
+  <!-- Chat -->
+  <div id="chat-overlay" class="hidden">
+    <div class="chat-container">
+
+      <div class="chat-header">
+        Eventos York & Katy
+        <button onclick="closeChat()">✖</button>
+      </div>
+
+      <div id="messages" class="chat-messages"></div>
+
+      <div class="chat-input">
+        <input
+          id="prompt"
+          type="text"
+          placeholder="Escribe tu mensaje..."
+          onkeydown="if(event.key==='Enter') sendMessage()"
+        />
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lógica -->
+  <script src="chat.js"></script>
+</body>
+</html>
+
+
